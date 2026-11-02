@@ -24,7 +24,7 @@ python -m notetaker devices          # find your mic / speakers
 $env:XAI_API_KEY = "your-key"        # xAI API key from console.x.ai (summaries only)
 ```
 
-The default summary provider is Grok via xAI. Create an API key at [xAI Console](https://console.x.ai), then set `XAI_API_KEY` in the same PowerShell window where you run `python -m notetaker record`. A Grok app subscription is separate from API access. To use Groq instead, set `llm_provider` to `groq` and `llm_model` to a supported Groq model in `config.json`, then set `$env:GROQ_API_KEY`. Do not paste API keys into chat or commit them to a file.
+The default summary provider is Grok via xAI. Create an API key at groq, then set `GROQ_API_KEY` in the same PowerShell window where you run `python -m notetaker record`. A Grok app subscription is separate from API access. To use Groq instead, set `llm_provider` to `groq` and `llm_model` to a supported Groq model in `config.json`, then set `$env:GROQ_API_KEY`. Do not paste API keys into chat or commit them to a file.
 
 If xAI returns HTTP 403, check that the API key is enabled, belongs to the selected team in xAI Console, and that the team has API access and available credits. xAI documents 403 as a key/team permission or access restriction.
 
